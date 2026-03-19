@@ -15,7 +15,7 @@ main()
     printfinit();
     printf("\n");
     printf("xv6 kernel is booting\n");
-    printf("\n");
+    printf("hart %d starting\n", cpuid());
     kinit();         // physical page allocator
     kvminit();       // create kernel page table
     kvminithart();   // turn on paging
